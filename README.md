@@ -1,4 +1,5 @@
-# CmsMvp
+# cms-mvp
+This in a MVP of an awesome CMS 🔧
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
