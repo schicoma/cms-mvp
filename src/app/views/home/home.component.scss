@@ -1,0 +1,14 @@
+.container {
+    height: calc(100vh - 56px);
+    padding-top: 24px;
+}
+
+.navbar {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+    box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+}
+
+.full-width {
+    width: 100%;
+}

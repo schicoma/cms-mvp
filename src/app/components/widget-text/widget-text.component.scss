@@ -1,0 +1,11 @@
+.widget-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+    span {
+        color: #6c757d;
+        font-size: 24px;
+    }
+}

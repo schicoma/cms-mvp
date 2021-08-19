@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "cms-mvp"
+  "defaultProject": "cms-mvp",
+  "cli": {
+    "analytics": false
+  }
 }
