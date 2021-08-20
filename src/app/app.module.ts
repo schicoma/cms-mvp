@@ -12,6 +12,7 @@ import { WidgetImageComponent } from './components/widget-image/widget-image.com
 import { WidgetTextComponent } from './components/widget-text/widget-text.component';
 import { EditComponent } from './views/edit/edit.component';
 import { HomeComponent } from './views/home/home.component';
+import { WidgetComponent } from './components/widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './views/home/home.component';
     EditComponent,
     WidgetImageComponent,
     WidgetTextComponent,
-    WidgetGreetingsComponent
+    WidgetGreetingsComponent,
+    WidgetComponent
   ],
   imports: [
     CommonModule,

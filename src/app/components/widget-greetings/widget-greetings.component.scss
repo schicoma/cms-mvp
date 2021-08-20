@@ -15,19 +15,6 @@
     }
 }
 
-.remove-button {
-    position: absolute;
-    right: -6px;
-    top: -6px;
-    display: none;
-}
-
-.widget:hover {
-    .remove-button {
-        display: block;
-    }
-}
-
 @media only screen and (max-width: 758px) {
     .widget-greetings {
         .view {

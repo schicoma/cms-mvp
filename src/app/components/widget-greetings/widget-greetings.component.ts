@@ -1,30 +1,23 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Widget } from 'src/app/models/widget';
+import { Component, Input, OnInit } from '@angular/core';
+import { WidgetComponent } from '../widget/widget.component';
 
 @Component({
   selector: 'app-widget-greetings',
   templateUrl: './widget-greetings.component.html',
-  styleUrls: ['./widget-greetings.component.scss']
+  styleUrls: ['./../widget/widget.component.scss', './widget-greetings.component.scss']
 })
-export class WidgetGreetingsComponent implements OnInit {
+export class WidgetGreetingsComponent extends WidgetComponent implements OnInit {
 
-  @Input() edit: boolean;
   @Input() loggedUserName: String;
-  @Input() widget: Widget;
-
-  @Output() onRemove: EventEmitter<any> = new EventEmitter();
 
   today: Date;
 
   constructor() {
-    this.today = new Date();
+    super();
   }
 
   ngOnInit(): void {
-  }
-
-  remove() {
-    this.onRemove.emit(this.widget);
+    this.today = new Date();
   }
 
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Widget } from 'src/app/models/widget';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { WidgetsService } from 'src/app/services/widgets.service';
-import { myWidgets } from '../../services/example-widgets';
 
 @Component({
   selector: 'app-edit',

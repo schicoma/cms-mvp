@@ -3,9 +3,13 @@
         <i class="bi-x-lg"></i>
     </button>
 
+    <!-- edit mode -->
+
     <div class="editor" *ngIf="edit">
         <span>Welcome component</span>
     </div>
+
+    <!-- render mode -->
 
     <div class="view" *ngIf="!edit">
         <b>Hello, {{loggedUserName}}</b>

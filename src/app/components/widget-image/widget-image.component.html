@@ -3,13 +3,17 @@
         <i class="bi-x-lg"></i>
     </button>
 
-    <div class="edit" *ngIf="edit">
+    <!-- edit mode -->
+
+    <div class="editor" *ngIf="edit">
         <picture>
             <img [src]="widget?.url" alt="A beautiful image">
         </picture>
 
         <input id="input-{{widget.id}}" type="file" accept="images/*" (change)="saveImage($event)">
     </div>
+
+    <!-- render mode -->
 
     <div class="view" *ngIf="!edit">
         <picture>
