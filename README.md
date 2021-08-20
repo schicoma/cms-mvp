@@ -1,6 +1,8 @@
 # Awesome CMS with Angular
 This in a MVP of an awesome CMS 🔧
 
+Link to test this app: https://schicoma.github.io/cms-mvp/home
+
 ## Development server
 
 Run `npm i` to install the dependencies. Then, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
