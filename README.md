@@ -23,12 +23,17 @@ This app contains two routes: **home** and **edit**
 
 This path renders the configured widgets. In the navbar, there is an **Edit** option to go to modify the widgets.
 
+![Captura de pantalla de 2021-08-20 00-59-27](https://user-images.githubusercontent.com/14263134/130188506-2b2df8f4-12d1-41ea-b574-03deb17642e5.png)
+
 ### Edit route
 
 Select the **Edit** button to enable the edit mode. 
 
+![Captura de pantalla de 2021-08-20 01-04-40](https://user-images.githubusercontent.com/14263134/130188564-d868833e-b2f8-47bb-9ced-1fc042051411.png)
 
 In order to add new widgets, select the **Add new** button. This button displays the follow options:
+
+![Captura de pantalla de 2021-08-20 01-05-36](https://user-images.githubusercontent.com/14263134/130188579-3cebd69c-21c3-4d6e-a95b-a0c992ecd77a.png)
 
 - ### Add image
 
