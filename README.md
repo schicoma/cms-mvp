@@ -1,28 +1,47 @@
-# cms-mvp
+# Awesome CMS with Angular
 This in a MVP of an awesome CMS 🔧
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm i` to install the dependencies. Then, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+## Libraries
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 11 
+- Bootstrap
+- Boostrap icons
+- ng-bootstrap
+- ngx-quill
 
-## Build
+## How to use
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This app contains two routes: **home** and **edit**
 
-## Running unit tests
+### Home route
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This path renders the configured widgets. In the navbar, there is an **Edit** option to go to modify the widgets.
 
-## Running end-to-end tests
+### Edit route
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Select the **Edit** button to enable the edit mode. 
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In order to add new widgets, select the **Add new** button. This button displays the follow options:
+
+- ### Add image
+
+This component shows an input file. Select the button to choose an image and display it.
+
+- ### Add text
+
+This component shows a WYGIWYS editor. Write what you want to display.
+
+- ### Add hello 🙂
+
+This component just shows a message. There is no option to edit
+
+Select the **Preview** button to view your changes before saving. 
+
+Press the **Save** button to keep the changes and view them on home
