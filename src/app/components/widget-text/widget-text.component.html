@@ -1,4 +1,5 @@
 <div class="widget widget-text" [ngClass]="{'plain': widget?.plain}">
+    <button class="btn btn-sm btn-danger rounded-circle remove-button" *ngIf="edit" (click)="remove()"><i class="bi-x-lg"></i></button>
     <div class="editor" *ngIf="edit">
         <quill-editor [(ngModel)]="widget.text" (onContentChanged)="onContentChanged($event)"></quill-editor>
     </div>

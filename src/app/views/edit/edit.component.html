@@ -10,14 +10,27 @@
     <div class="container">
         <div class="row options-section">
             <div class="col-12 text-end">
-                <button class="btn btn-primary" type="button" (click)="previewWidgets()" *ngIf="edit" [ngClass]="{'active': preview}">
+
+                <div ngbDropdown class="d-inline-block">
+                    <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle *ngIf="edit">
+                        <i class="bi-plus"></i> Add new
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem (click)="addWidget('image')">Add image</button>
+                        <button ngbDropdownItem (click)="addWidget('text')">Add text</button>
+                        <button ngbDropdownItem (click)="addWidget('greetings')">Add hello 🙂</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" type="button" (click)="previewWidgets()" *ngIf="edit"
+                    [ngClass]="{'active': preview}">
                     <i class="bi-eye"></i>
                     <span>
                         {{ preview ? 'Close preview' : 'Preview' }}
                     </span>
                 </button>
                 <button class="btn btn-primary " type="button" (click)="enableEdit()" *ngIf="!edit">
-                    Edit
+                    <i class="bi-pencil-square"></i> Edit
                 </button>
                 <div class="btn-group" role="group">
                     <button class="btn btn-primary" type="button" (click)="save()" *ngIf="edit">
@@ -35,11 +48,13 @@
 
         <div class="row">
             <div class="col-12" [ngClass]="{'full-width': widget.type === 'greetings' || widget.type === 'text'}"
-                *ngFor="let widget of widgets">
+                *ngFor="let widget of widgets; let index = index">
                 <app-widget-greetings *ngIf="widget.type === 'greetings'" [widget]="widget" [edit]="edit && !preview"
-                    [loggedUserName]="loggedUser.name"></app-widget-greetings>
-                <app-widget-image *ngIf="widget.type === 'image'" [widget]="widget" [edit]="edit && !preview"></app-widget-image>
-                <app-widget-text *ngIf="widget.type === 'text'" [widget]="widget" [edit]="edit && !preview"></app-widget-text>
+                    [loggedUserName]="loggedUser.name" (onRemove)="removeWidget($event, index)"></app-widget-greetings>
+                <app-widget-image *ngIf="widget.type === 'image'" [widget]="widget" [edit]="edit && !preview"
+                    (onRemove)="removeWidget($event, index)"></app-widget-image>
+                <app-widget-text *ngIf="widget.type === 'text'" [widget]="widget" [edit]="edit && !preview"
+                    (onRemove)="removeWidget($event, index)"></app-widget-text>
             </div>
         </div>
     </div>

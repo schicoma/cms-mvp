@@ -32,8 +32,11 @@ export class EditComponent implements OnInit {
     this.widgetsTemp = this.widgets.map(widget => { return { ...widget }; });
   }
 
-  enableEdit() {
-    this.edit = true;
+  addWidget(type: string) {
+    this.widgets.push({
+      id: new Date().getTime(),
+      type
+    });
   }
 
   cancel() {
@@ -44,8 +47,16 @@ export class EditComponent implements OnInit {
     this.widgets = this.widgetsTemp.map(widget => { return { ...widget }; });
   }
 
+  enableEdit() {
+    this.edit = true;
+  }
+
   previewWidgets() {
     this.preview = !this.preview;
+  }
+
+  removeWidget(widget: Widget, index: number) {
+    this.widgets.splice(index, 1);
   }
 
   save() {
@@ -57,5 +68,6 @@ export class EditComponent implements OnInit {
 
     this.widgetsService.setData(this.widgets);
   }
+
 
 }

@@ -1,4 +1,8 @@
 <div class="widget widget-greetings">
+    <button class="btn btn-sm btn-danger rounded-circle remove-button" *ngIf="edit" (click)="remove()">
+        <i class="bi-x-lg"></i>
+    </button>
+
     <div class="editor" *ngIf="edit">
         <span>Welcome component</span>
     </div>

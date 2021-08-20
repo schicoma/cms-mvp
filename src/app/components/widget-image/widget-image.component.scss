@@ -1,9 +1,37 @@
 .widget-image {
     display: inline-block;
 
-    img {
+    .view img {
         max-height: 300px;
         width: auto;
         max-width: 100%;
+    }
+
+    .edit {
+        display: flex;
+        flex-direction: column;
+
+        picture {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-height: 100px;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.remove-button {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    display: none;
+}
+
+.widget:hover {
+    .remove-button {
+        display: block;
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Widget } from 'src/app/models/widget';
 
 @Component({
@@ -12,6 +12,8 @@ export class WidgetGreetingsComponent implements OnInit {
   @Input() loggedUserName: String;
   @Input() widget: Widget;
 
+  @Output() onRemove: EventEmitter<any> = new EventEmitter();
+
   today: Date;
 
   constructor() {
@@ -19,6 +21,10 @@ export class WidgetGreetingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  remove() {
+    this.onRemove.emit(this.widget);
   }
 
 }

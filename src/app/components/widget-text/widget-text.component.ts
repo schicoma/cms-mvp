@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Widget } from 'src/app/models/widget';
 
@@ -11,6 +11,8 @@ export class WidgetTextComponent implements OnInit {
 
   @Input() edit: boolean;
   @Input() widget: Widget;
+
+  @Output() onRemove: EventEmitter<any> = new EventEmitter();
 
   htmlText: any;
 
@@ -25,5 +27,10 @@ export class WidgetTextComponent implements OnInit {
   onContentChanged($event: any) {
     this.htmlText = this.sanitizer.bypassSecurityTrustHtml(this.widget.text!);
   }
+
+  remove() {
+    this.onRemove.emit(this.widget);
+  }
+
 
 }
