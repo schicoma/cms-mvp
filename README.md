@@ -1,8 +1,6 @@
 # Awesome CMS with Angular
 This in a MVP of an awesome CMS 🔧
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
-
 ## Development server
 
 Run `npm i` to install the dependencies. Then, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
@@ -50,3 +48,12 @@ This component just shows a message. There is no option to edit
 Select the **Preview** button to view your changes before saving. 
 
 Press the **Save** button to keep the changes and view them on home
+
+In order to remove a widget, hover over any component to show a **x** button. Press it.
+
+![Captura de pantalla de 2021-08-20 01-21-25](https://user-images.githubusercontent.com/14263134/130189209-165f4bee-3083-43c1-9b38-8ccbdfcc8d3a.png)
+
+## Notes (in Spanish 😅)
+
+La app tiene algunos datos de ejemplos, esa información se puede editar o eliminar con las opciones correspondientes. A pesar de que un requerimiento solicitaba no persistir los datos, agregué dicho feature en el localStorage. Al ser un *mini* CMS, no se tienen en cuenta validaciones más *complejas*, como el tamaño de la imagen a subir, cantidad de widgets a mostrar, entre otros.
+
