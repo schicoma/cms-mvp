@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { myWidgets } from './example-widgets';
-
-const LOGGED_USER = {
-  username: 'schicoma',
-  name: 'Sebastian Chicoma'
-};
+import { AuthenticationService } from 'src/app/services/authentication.service';
+import { WidgetsService } from 'src/app/services/widgets.service';
+import { myWidgets } from '../../services/example-widgets';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +10,17 @@ const LOGGED_USER = {
 })
 export class HomeComponent implements OnInit {
 
-  loggedUser = LOGGED_USER;
+  loggedUser: any;
   widgets = myWidgets;
 
-  constructor() { }
+  constructor(
+    private authenticationService: AuthenticationService,
+    private widgetsService: WidgetsService
+  ) { }
 
   ngOnInit(): void {
+    this.loggedUser = this.authenticationService.getLoggedUser();
+    this.widgets = this.widgetsService.getData();
   }
 
 }

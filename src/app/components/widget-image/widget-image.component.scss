@@ -2,7 +2,8 @@
     display: inline-block;
 
     img {
-        height: 300px;
+        max-height: 300px;
         width: auto;
+        max-width: 100%;
     }
 }

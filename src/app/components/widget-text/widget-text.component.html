@@ -1,5 +1,8 @@
-<div class="widget widget-greetings">
-    <span>
-        {{ widget?.text }}
-    </span>
+<div class="widget widget-text" [ngClass]="{'plain': widget?.plain}">
+    <div class="editor" *ngIf="edit">
+        <quill-editor [(ngModel)]="widget.text" (onContentChanged)="onContentChanged($event)"></quill-editor>
+    </div>
+    <div class="view" *ngIf="!edit">
+        <span [innerHtml]="htmlText"></span>
+    </div>
 </div>

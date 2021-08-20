@@ -1,6 +1,11 @@
 <div class="widget widget-image">
-    <picture>
-        <img [src]="widget?.url"
-            alt="A beautiful image">
-    </picture>
+    <div class="view" *ngIf="edit">
+        <input type="file">
+    </div>
+
+    <div class="view" *ngIf="!edit">
+        <picture>
+            <img [src]="widget?.url" alt="A beautiful image">
+        </picture>
+    </div>
 </div>

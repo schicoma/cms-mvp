@@ -1,0 +1,27 @@
+main .container {
+    height: calc(100vh - 56px);
+    padding-top: 24px;
+}
+
+.navbar {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 35px 0 rgb(154 161 171 / 20%);
+    box-shadow: 0 0 35px 0 rgb(154 161 171 / 20%);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.options-section {
+    position: sticky;
+    top: -1px;
+    background: #f7f9ff;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+
+    & > button,
+    .btn-group {
+        margin-left: 8px;
+    }
+}

@@ -1,1 +1,46 @@
-<p>edit works!</p>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Awesome CMS Editor</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="row options-section">
+            <div class="col-12 text-end">
+                <button class="btn btn-primary" type="button" (click)="previewWidgets()" *ngIf="edit" [ngClass]="{'active': preview}">
+                    <i class="bi-eye"></i>
+                    <span>
+                        {{ preview ? 'Close preview' : 'Preview' }}
+                    </span>
+                </button>
+                <button class="btn btn-primary " type="button" (click)="enableEdit()" *ngIf="!edit">
+                    Edit
+                </button>
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary" type="button" (click)="save()" *ngIf="edit">
+                        <i class="bi-check"></i> Save
+                    </button>
+                    <button class="btn btn-secondary" type="button" (click)="cancel()" *ngIf="edit">
+                        <i class="bi-x"></i> Cancel
+                    </button>
+                </div>
+                <a routerLink="/home" class="btn btn-light" type="button" *ngIf="!edit">
+                    <i class="bi-house"></i> Ir al home
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" [ngClass]="{'full-width': widget.type === 'greetings' || widget.type === 'text'}"
+                *ngFor="let widget of widgets">
+                <app-widget-greetings *ngIf="widget.type === 'greetings'" [widget]="widget" [edit]="edit && !preview"
+                    [loggedUserName]="loggedUser.name"></app-widget-greetings>
+                <app-widget-image *ngIf="widget.type === 'image'" [widget]="widget" [edit]="edit && !preview"></app-widget-image>
+                <app-widget-text *ngIf="widget.type === 'text'" [widget]="widget" [edit]="edit && !preview"></app-widget-text>
+            </div>
+        </div>
+    </div>
+</main>

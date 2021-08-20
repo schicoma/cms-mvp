@@ -1,16 +1,19 @@
 <header>
     <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+            <a class="navbar-brand" href="#">My Awesome CMS Editor</a>
+            <a routerLink="/edit"><i class="bi-pencil-square"></i> </a>
         </div>
     </nav>
 </header>
 
 <main>
     <div class="container">
+
         <div class="widget-container" [ngClass]="{'full-width': widget.type === 'greetings' || widget.type === 'text'}"
             *ngFor="let widget of widgets">
-            <app-widget-greetings *ngIf="widget.type === 'greetings'" [widget]="widget" [loggedUserName]="loggedUser.name"></app-widget-greetings>
+            <app-widget-greetings *ngIf="widget.type === 'greetings'" [widget]="widget"
+                [loggedUserName]="loggedUser.name"></app-widget-greetings>
             <app-widget-image *ngIf="widget.type === 'image'" [widget]="widget"></app-widget-image>
             <app-widget-text *ngIf="widget.type === 'text'" [widget]="widget"></app-widget-text>
         </div>

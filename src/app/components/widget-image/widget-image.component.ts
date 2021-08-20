@@ -8,6 +8,7 @@ import { Widget } from 'src/app/models/widget';
 })
 export class WidgetImageComponent implements OnInit {
 
+  @Input() edit: boolean;
   @Input() widget: Widget;
 
   constructor() { }

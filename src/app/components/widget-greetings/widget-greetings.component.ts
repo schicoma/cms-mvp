@@ -8,11 +8,9 @@ import { Widget } from 'src/app/models/widget';
 })
 export class WidgetGreetingsComponent implements OnInit {
 
-  @Input()
-  widget: Widget;
-
-  @Input()
-  loggedUserName: String;
+  @Input() edit: boolean;
+  @Input() loggedUserName: String;
+  @Input() widget: Widget;
 
   today: Date;
 

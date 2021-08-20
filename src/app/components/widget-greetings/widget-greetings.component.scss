@@ -4,8 +4,26 @@
     align-items: center;
     height: 120px;
 
-    span {
-        color: #6c757d;
+    color: #6c757d;
+
+    b {
         font-size: 24px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    .widget-greetings {
+        .view {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            font-size: 18px;
+        }
     }
 }

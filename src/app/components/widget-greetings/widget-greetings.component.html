@@ -1,3 +1,12 @@
 <div class="widget widget-greetings">
-    <span>Hello, <b>{{loggedUserName}}</b>. Your last login was <b>{{today | date: 'MMM dd, yyyy hh:mm:ss aa'}}</b></span>
+    <div class="editor" *ngIf="edit">
+        <span>Welcome component</span>
+    </div>
+
+    <div class="view" *ngIf="!edit">
+        <b>Hello, {{loggedUserName}}</b>
+        <span>
+            Your last login was {{today | date: 'MMM dd, yyyy hh:mm:ss aa'}}
+        </span>
+    </div>
 </div>
