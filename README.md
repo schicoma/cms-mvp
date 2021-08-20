@@ -1,7 +1,7 @@
 # Awesome CMS with Angular
 This in a MVP of an awesome CMS 🔧
 
-Link to test this app: https://schicoma.github.io/cms-mvp/home
+Link to test this app: https://schicoma.github.io/cms-mvp
 
 ## Development server
 

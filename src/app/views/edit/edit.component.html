@@ -25,7 +25,7 @@
                 <button class="btn btn-primary" type="button" (click)="previewWidgets()" *ngIf="edit"
                     [ngClass]="{'active': preview}">
                     <i class="bi-eye"></i>
-                    <span>
+                    <span class="d-none d-lg-inline">
                         {{ preview ? 'Close preview' : 'Preview' }}
                     </span>
                 </button>
